@@ -1,0 +1,24 @@
+def sums_to_array(univ_lst,l):
+    val_lst = []
+    for i in range(len(univ_lst)):
+        val_lst.append(sum(univ_lst[i]))
+    sum1 = 0
+    for i in range(len(univ_lst[0])):
+        for j in range(len(univ_lst)):
+            sum1+=univ_lst[i][j]
+        val_lst.append(sum1)
+        sum1 = 0
+    res_count = 0
+    for values in val_lst:
+        if values in range(l[0],l[1])
+           res_count+=1
+    return res_count
+
+if __name__ == "__main__":
+    val = raw_input("enter value of row and column seperated by comma ")
+    i,j = list(map(int,val.split(",")))
+    univ_lst = []
+    for values in range(i):
+        univ_lst.append(list(map(int,raw_input("enter %s values for %s column sepearted by comma " %(j,values)).split(","))))
+    L = list(map(int,raw_input("enter value of 2 ranges seperated by comma ").split(",")))
+    print (sums_to_array(univ_lst,L))
