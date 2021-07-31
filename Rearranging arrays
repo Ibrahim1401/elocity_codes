@@ -1,0 +1,13 @@
+def rearrange_array(numb_lst):
+    count_dic = []
+    for val in numb_lst:
+	count_dic[val] = count_dic.get(val,0)+1
+    for i in count_dic:
+	if count_dic[i]%2!=0:
+           return "NO"
+    return "YES"		
+
+if __name__ == "__main__":
+   numb_lst = input("give input of numbers seperated by comma")
+   numb_lst = list(map(int,numb_lst.split(",")))
+   print (rearrange_array(numb_lst))
